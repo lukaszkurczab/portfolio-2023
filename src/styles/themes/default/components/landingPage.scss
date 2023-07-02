@@ -1,0 +1,89 @@
+.landingPage {
+  width: calc(100vw - 400px);
+  height: calc(100vh - 200px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto Mono", monospace;
+
+  h1 {
+    font-size: 128px;
+    line-height: 128px;
+    margin: 16px;
+    background: #cfcfcf;
+    background: -webkit-linear-gradient(
+      to bottom right,
+      #cfcfcf 0%,
+      #383838 100%
+    );
+    background: -moz-linear-gradient(to bottom right, #cfcfcf 0%, #383838 100%);
+    background: linear-gradient(to bottom right, #cfcfcf 0%, #383838 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-direction: column;
+    @include myFlex;
+
+    .name {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 500;
+    text-shadow: 8px 6px 8px #000;
+    transform: translateX(50%);
+    color: #707070;
+  }
+}
+
+@media (max-width: $laptop) {
+  .landingPage {
+    h1 {
+      font-size: 112px;
+      line-height: 112px;
+      .name {
+        font-size: 42px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .landingPage {
+    h1 {
+      font-size: 98px;
+      line-height: 98px;
+      .name {
+        font-size: 36px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: $mobile-small) {
+  .landingPage {
+    h1 {
+      font-size: 72px;
+      line-height: 72px;
+      .name {
+        font-size: 36px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+}

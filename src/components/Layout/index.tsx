@@ -1,5 +1,8 @@
 import * as React from "react"
-import Particles from 'react-particles-js';
+import Particles from "react-particles";
+import Image from 'next/image';
+import type { Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 import logo from "../../assets/logo.png"
 import facebook from "../../assets/facebook.png"
 import bitbucket from "../../assets/bitbucket.png"
@@ -7,7 +10,7 @@ import linkedin from "../../assets/linkedin.png"
 import Menu from "../Menu"
 
 interface LayoutInterace{
-  children: JSX.Element
+  children: any
   view: number
   setView: any
   page:string
@@ -46,20 +49,20 @@ const Layout = ({...props}:LayoutInterace) => {
           }
         }}
       />
-      <img src={logo} alt="" className="layout__logo" />
+      <Image src={logo} alt="" className="layout__logo" />
       <Menu view={props.view} setView={props.setView} page={props.page}/>
       <div className="page-wrapper">
         {props.children}
       </div>
       <div className="layout__links">
         <a href="https://www.facebook.com/kurczab.lukasz/" className="link">
-          <img src={facebook} alt="" className="link__icon" />
+          <Image src={facebook} alt="" className="link__icon" />
         </a>
         <a href="https://bitbucket.org/lukaszkurczab/" className="link">
-          <img src={bitbucket} alt="" className="link__icon" />
+          <Image src={bitbucket} alt="" className="link__icon" />
         </a>
         <a href="https://www.linkedin.com/in/lukaszkurczab/" className="link">
-          <img src={linkedin} alt="" className="link__icon" />
+          <Image src={linkedin} alt="" className="link__icon" />
         </a>
       </div>
     </div>

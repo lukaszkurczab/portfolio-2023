@@ -1,4 +1,5 @@
 import * as React from "react"
+import Image from 'next/image';
 
 import socialMedia from "../assets/socialMedia.jpg"
 import quiz from "../assets/quiz.jpg"
@@ -20,42 +21,42 @@ const Projects = ({displayPage}:ContactInterace) => {
       <h2 className="projects__title">Projects</h2>
       <div className="projects__tiles">
         <a href="https://booking-lkurczab.netlify.app/" className="project__tile">
-            <img src={booking} alt="" className="project__tile-image"/>
+            <Image src={booking} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">Booking</h3>
               <h2 className="project__tile-desc">Mapping an existing page</h2>
             </div>
         </a>
         <a href="https://quizapp-lkurczab.netlify.app/" className="project__tile">
-            <img src={quiz} alt="" className="project__tile-image"/>
+            <Image src={quiz} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">Quiz</h3>
               <h2 className="project__tile-desc">Own project</h2>
             </div>
         </a>
         <a href="https://portfolio-lkurczab.netlify.app/" className="project__tile">
-            <img src={portfolio} alt="" className="project__tile-image"/>
+            <Image src={portfolio} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">Portfolio</h3>
               <h2 className="project__tile-desc">Created based on the project</h2>
             </div>
         </a>
         <a href="https://youtube-lkurczab.netlify.app/" className="project__tile">
-            <img src={youtube} alt="" className="project__tile-image"/>
+            <Image src={youtube} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">YouTube</h3>
               <h2 className="project__tile-desc">Mapping an existing page</h2>
             </div>
         </a>
         <a href="https://fylo-lkurczab.netlify.app/" className="project__tile">
-            <img src={fylo} alt="" className="project__tile-image"/>
+            <Image src={fylo} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">Fylo</h3>
               <h2 className="project__tile-desc">Created based on the project</h2>
             </div>
         </a>
         <a href="https://social-media-dashboard-lkurczab.netlify.app/" className="project__tile">
-            <img src={socialMedia} alt="" className="project__tile-image"/>
+            <Image src={socialMedia} alt="" className="project__tile-image"/>
             <div className="project__tile-textWrapper">
               <h3 className="project__tile-name">Social Media Description</h3>
               <h2 className="project__tile-desc">Created based on the project</h2>

@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+import Image from 'next/image';
 import * as React from "react"
 import VanillaTilt from 'vanilla-tilt';
 
 interface ContactInterace{
-  src: string;
+  src: StaticImageData;
   name: string
 }
 
@@ -28,8 +30,8 @@ const TechTile = ({src, name}:ContactInterace) => {
         <Tilt className="tile" options={options}>
           <div className="tile-content">
             <div className="tile-imgWrapper"> 
-            <img src={src} alt="" className="tile-img" />
-              </div>
+              <Image src={src} alt="" className="tile-img" />
+            </div>
             <h3 className="tile-text">{name}</h3>
           </div>
         </Tilt>

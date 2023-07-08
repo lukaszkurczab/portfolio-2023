@@ -2,25 +2,80 @@
 @import "../styles/variables.scss" ;
 
 .nav{
-  flex-direction: column;
   position: fixed;
+  flex-direction: column;
   align-items: flex-end;
   top: 50%;
-  right: 32px;
+  right: 64px;
   transform: translateY(-50%); 
   @include myFlex;
 
   &__button{
     width: 10px;
-    height: 50px;
+    height: 60px;
     box-sizing: border-box;
-    overflow: hidden;
+    border-radius: 2px;
     color: transparent;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    @include myFlex;
+
+    &Bar{
+      display: block;
+      height: 60px;
+      width: 3px;
+      background-color: #707070;
+      border-radius: 2px;
+    }
+
+    &Text{
+      display: none;
+      width: 80px;
+      white-space: nowrap;
+      position: absolute;
+      margin-right: 20px;
+      transition: 0.2s;
+      text-align: right;
+      color: #cfcfcf;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
     &:hover{
       cursor: pointer;
-      width: auto;
-      color: black;
+      width: 80px;
+
+      .nav__buttonText{
+        display: block;
+
+        &:hover{
+          color: #cfcfcf;
+        }
+      }
     }
   }
+
+    &__dot{
+      display: block;
+      height: 3px;
+      width: 3px;
+      border-radius: 50%;
+      margin: 20px 0;
+      background-color: #707070;
+    }
+
+  // .active{
+  //   .nav__button{
+  //     &Bar{
+  //       background-color: #fff;
+  //       box-shadow: 0px 0px 5px #fff;
+  //     }
+
+  //     &Text{
+  //       display: block;
+  //     }
+  //   }
+  // }
 }

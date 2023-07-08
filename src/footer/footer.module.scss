@@ -1,0 +1,63 @@
+@import "../styles/mixins.scss" ;
+@import "../styles/variables.scss" ;
+
+.footer {
+    position: absolute;
+    bottom: 64px;
+    width: 96px;
+    align-items: center;
+    flex-direction: column;
+    @include myFlex;
+
+    &__link {
+      margin-top: 16px;
+      padding: 10px;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      @include myFlex;
+
+      &Icon {
+        height: 100%;
+      }
+
+      &:hover {
+        background-image: linear-gradient(
+          135deg,
+          rgba(207, 207, 207, 0.8),
+          rgba(56, 56, 56, 0.8)
+        );
+      }
+    }
+}
+
+@media (max-width: $laptop) {
+  .footer {
+      bottom: 48px;
+      width: 72px;
+    }
+}
+
+@media (max-width: $tablet) {
+}
+
+@media (max-width: $mobile) {
+  .footer {
+      top: 32px;
+      right: 156px;
+      align-items: flex-start;
+      flex-direction: row;
+
+      &__link {
+        margin: 16px 12px;
+      }
+  }
+}
+
+@media (max-width: $mobile-small) {
+  .footer  {
+      top: 16px;
+    }
+}

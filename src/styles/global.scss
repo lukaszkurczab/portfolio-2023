@@ -2,9 +2,9 @@
 @import "./normalize";
 @import "./fonts.scss";
 
-* {
-  margin: 0;
+*{ 
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -46,35 +46,4 @@ ul {
 
 fieldset {
   border: none;
-}
-
-.page-container {
-  margin: 0;
-  width: calc(100vw - 400px);
-  height: calc(100vh - 200px);
-  position: absolute;
-  overflow: hidden;
-}
-
-button,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border: none;
-}
-
-.heading {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  margin-bottom: 16px;
-  color: $c-dark-grey;
-  padding-left: 8px;
-}
-
-@media screen and (max-width: $break-mid) {
-  .page-container {
-    margin: 0 10px;
-  }
 }

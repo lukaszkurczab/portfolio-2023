@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import { ParticlesComponent } from '../src/particles/index'
 import Footer from '../src/footer/index'
+import styles from './layout.module.scss'
+import '../src/styles/global.scss'
+import Navigation from '../src/navigation/index'
 
 import logo from "../public/logo.png"
 
@@ -17,9 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{background: "radial-gradient(circle at 35% 15%, #444, #222 40%)"}}>
+      <body className={styles.layout}>
         <ParticlesComponent />
-        <Image src={logo} alt="" className="layout__logo" />
+        <Image src={logo} alt="" className={styles.layout__logo} />
+        <Navigation />
         {children}
         <Footer/>
       </body>

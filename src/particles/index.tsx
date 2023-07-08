@@ -7,11 +7,11 @@ import { loadFull } from "tsparticles";
 const isBrowser = typeof window !== "undefined"
 
 export const ParticlesComponent = () => {
-    const [dots, setDots] = useState(isBrowser ? Math.round(window.innerWidth / 20) : 100)
+    const [dots, setDots] = useState(isBrowser ? Math.round(window.innerWidth / 15) : 100)
 
   useEffect((): any => {
     function handleResize() {
-      setDots(isBrowser ? Math.round(window.innerWidth / 20) : 100)
+      setDots(isBrowser ? Math.round(window.innerWidth / 15) : 100)
 
     }
 
@@ -24,22 +24,12 @@ export const ParticlesComponent = () => {
     const options = useMemo(() => {
         return {
             fpsLimit: 60,
-            fullScreen: {
-                enable: true,
-                zIndex: -1
-            },
             particles: {
                 number: {
                     value: dots,
-                    density: {
-                        enable: false,
-                    },
                 },
                 color: {
                     value: "#fff",
-                    animation: {
-                        enable: false,
-                    },
                 },
                 shape: {
                     type: "circle",

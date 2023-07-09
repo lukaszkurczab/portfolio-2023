@@ -24,7 +24,9 @@ export default function RootLayout({
         <ParticlesComponent />
         <Image src={logo} alt="" className={styles.layout__logo} />
         <Navigation />
-        {children}
+          <div className={styles.pageWrapper}>
+            {children}
+          </div>
         <Footer/>
       </body>
     </html>

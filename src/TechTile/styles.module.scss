@@ -1,20 +1,6 @@
-.tiles-wrapper {
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  @include myFlex;
-}
-
-.tiles__title {
-  text-align: center;
-  font-size: 54px;
-  line-height: 54x;
-  font-weight: 500;
-  text-shadow: 8px 6px 8px #000;
-  color: #cfcfcf;
-  margin-bottom: 32px;
-}
+@import "../../src/styles/variables";
+@import "../../src/styles/mixins";
+@import "../../src/styles/fonts";
 
 .tile {
   position: relative;
@@ -22,7 +8,7 @@
   height: 200px;
   margin: 16px 30px;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -30,7 +16,7 @@
   backdrop-filter: blur(10px);
   overflow: visible;
 
-  &-content {
+  &Content {
     position: relative;
     display: flex;
     justify-content: center;
@@ -40,15 +26,16 @@
     transition: 0.5s;
   }
 
-  &-text {
+  &Text {
     text-align: center;
   }
 
-  &-img {
-    max-width: 60%;
+  &Img {
+    width: 60%;
+    height: auto;
   }
 
-  &-imgWrapper {
+  &ImgWrapper {
     margin-bottom: 15px;
     width: 100%;
     height: 50%;
@@ -58,8 +45,7 @@
   }
 
   &:hover {
-    cursor: pointer;
-    .tile-content {
+    .tileContent {
       opacity: 1;
       transform: translateY(-20px);
     }
@@ -67,14 +53,6 @@
 }
 
 @media (max-width: $laptop) {
-  .tiles__title {
-    margin-bottom: 22px;
-  }
-
-  .tiles-wrapper {
-    max-height: 365px;
-    overflow-y: scroll;
-
     .tile {
       margin: 8px 18px;
       width: 120px;
@@ -86,62 +64,35 @@
       }
 
       &:hover {
-        .tile-content {
+        .tileContent {
           transform: translateY(-10px);
         }
       }
     }
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-  }
 }
 
 @media (max-width: $tablet) {
-  .tiles__title {
-    margin-bottom: 22px;
-  }
-
-  .tiles-wrapper {
     .tile {
       width: 86px;
       height: 128px;
 
-      .tile-content {
+      .tileContent {
         .tile-text {
           font-size: 14px;
         }
       }
     }
-  }
 }
 
 @media (max-width: $mobile) {
-  .tiles__title {
-    margin-bottom: 22px;
-  }
-
-  .tiles-wrapper {
-    max-height: 540px;
-
     .tile {
       width: 120px;
       height: 160px;
     }
-  }
 }
 
 @media (max-width: $mobile-small) {
-  .tiles__title {
-    font-size: 36px;
-  }
-
-  .tiles-wrapper {
-    max-height: 365px;
-
     .tile {
       margin: 8px 12px;
     }
-  }
 }

@@ -1,0 +1,85 @@
+@import "../../src/styles/variables";
+@import "../../src/styles/mixins";
+@import "../../src/styles/fonts";
+
+.landingPage{
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  @include myFlex;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.tiles__title {
+  text-align: center;
+  font-size: 54px;
+  line-height: 54px;
+  font-weight: 500;
+  text-shadow: 8px 6px 8px #000;
+  color: #cfcfcf;
+  margin-bottom: 32px;
+}
+
+.tilesGroup {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  width: 100%;
+  @include myFlex;
+
+  &__title{
+    font-size: 32px;
+    text-shadow: 4px 3px 4px #000;
+    color: #cfcfcf;
+  }
+
+  &__tiles{
+    width: 100%;
+    @include myFlex;
+  }
+}
+
+
+@media (max-width: $laptop) {
+  .tiles__title {
+    margin-bottom: 22px;
+  }
+
+  .tilesGroup {
+    max-height: 365px;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: $tablet) {
+  .tiles__title {
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .tiles__title {
+    margin-bottom: 22px;
+  }
+
+  .tilesGroup {
+    max-height: 540px;
+  }
+}
+
+@media (max-width: $mobile-small) {
+  .tiles__title {
+    font-size: 36px;
+  }
+
+  .tilesGroup {
+    max-height: 365px;
+  }
+}

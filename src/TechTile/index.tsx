@@ -1,40 +1,24 @@
 import { StaticImageData } from "next/image";
 import Image from 'next/image';
 import * as React from "react"
-import VanillaTilt from 'vanilla-tilt';
 
-interface ContactInterace{
+import styles from "./styles.module.scss"
+
+interface Props{
   src: StaticImageData;
   name: string
 }
 
-function Tilt(props) {
-  const { options, ...rest } = props;
-  const tilt = React.useRef(null);
-
-  React.useEffect(() => {
-    VanillaTilt.init(tilt.current, options);
-  }, [options]);
-
-  return <div ref={tilt} {...rest} />;
-}
-
-const TechTile = ({src, name}:ContactInterace) => {
-  const options = {
-    scale: 1.1,
-    speed: 1000,
-    max: 30
-  };
-
+const TechTile = ({src, name}:Props) => {
   return (
-        <Tilt className="tile" options={options}>
-          <div className="tile-content">
-            <div className="tile-imgWrapper"> 
-              <Image src={src} alt="" className="tile-img" />
+        <div className={styles.tile}>
+          <div className={styles.tileContent}>
+            <div className={styles.tileImgWrapper}> 
+              <Image src={src} alt="" className={styles.tileImg} />
             </div>
-            <h3 className="tile-text">{name}</h3>
+            <h3 className={styles.tileText}>{name}</h3>
           </div>
-        </Tilt>
+        </div>
   )
 }
 

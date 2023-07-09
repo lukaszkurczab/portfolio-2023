@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={styles.layout}>
         <ParticlesComponent />
         <Image src={logo} alt="" className={styles.layout__logo} />
-        <Navigation />
+        <Navigation page=""/>
           <div className={styles.pageWrapper}>
             {children}
           </div>

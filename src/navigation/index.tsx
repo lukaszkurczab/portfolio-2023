@@ -1,27 +1,31 @@
 import styles from "./navigation.module.scss"
 
-export default function Footer() {
+interface Props {
+  page: string;
+}
+
+export default function Navigation({page}: Props) {
   return (
         <div className={styles.nav}>
-          <div className={styles.nav__button}>
+          <button className={`${styles.nav__button} ${styles.active}`}>
             <span className={styles.nav__buttonBar} />
             <a className={styles.nav__buttonText} >Home</a>
-          </div>
+          </button>
           <span className={styles.nav__dot}/>
-          <div className={styles.nav__button}>
+          <button className={styles.nav__button}>
             <span className={styles.nav__buttonBar} />
             <a className={styles.nav__buttonText} >Tech stack</a>
-          </div>
+          </button>
           <span className={styles.nav__dot}/>
-          <div className={styles.nav__button}>
+          <button className={styles.nav__button}>
             <span className={styles.nav__buttonBar} />
-            <a className={styles.nav__buttonText} >Projects</a>
-          </div>
+            <a className={styles.nav__buttonText} >Experience</a>
+          </button>
           <span className={styles.nav__dot}/>
-          <div className={styles.nav__button}>
+          <button className={styles.nav__button}>
             <span className={styles.nav__buttonBar} />
             <a className={styles.nav__buttonText} >Contact</a>
-          </div>
+          </button>
         </div>
   )
 }

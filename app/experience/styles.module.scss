@@ -22,27 +22,33 @@
     font-weight: 500;
     text-shadow: 8px 6px 8px #000;
     color: #cfcfcf;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   
-  .projects__tiles {
+  .projects__group {
     width: 100%;
-    height: calc(100% - 62px);
+    flex-direction: column;
     flex-wrap: nowrap;
     @include myFlex;
+
+    .projectsTiles{
+      @include myFlex;
+    }
   
     .project__tile {
       flex-shrink: 1;
       width: calc(100% / 6);
       overflow: hidden;
       position: relative;
-      height: 50%;
-      margin: 48px 4px;
+      margin: 16px 10px;
+      height: 300px;
       opacity: 0.9;
+      flex-shrink: 1;
   
       &Image {
         position: absolute;
         height: 100%;
+        width: auto;
       }
   
       &TextWrapper {

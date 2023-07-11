@@ -4,22 +4,21 @@ const Contact = () => {
 
   return (
     <main className={styles.landingPage}>
-      <h2 className="contact__title">Contact</h2>
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" className="contact">
-        <input type="hidden" name="bot-field" />
+      <h2 className={styles.contact__title}>Contact</h2>
+      <form name="contact" className={styles.contact}>
         <input type="hidden" name="form-name" value="contact" />
-        <label className="contact__fieldWrapper">
-          <input type="email" name="email" id="email" placeholder="email@example.com"/>
+        <label className={styles.contact__fieldWrapper}>
+          <input type="email" name="email" id="email" placeholder="yours-email@example.com"/>
         </label>
-        <label className="contact__fieldWrapper">
-          <input type="text" name="subject" id="subject" placeholder="Subject" />
+        <label className={styles.contact__fieldWrapper}>
+          <input type="text" name="subject" id="subject" placeholder="Topic" />
         </label>
-        <label className="contact__fieldWrapper">
+        <label className={styles.contact__fieldWrapper}>
           <textarea name="message" id="message" rows={7} placeholder="Message" />
         </label>
-        <div className="contact__buttonsWrapper">
-          <button type="submit" className="contact__button contact__button-main">Send</button>
-          <input type="reset" value="Clear" className="contact__button" />
+        <div className={styles.contact__buttonsWrapper}>
+          <button type="submit" className={`${styles.contact__button}`}>Send</button>
+          <input type="reset" value="Clear" className={styles.contact__button} />
         </div>
       </form>
     </main>

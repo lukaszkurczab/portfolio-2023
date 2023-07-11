@@ -1,31 +1,44 @@
+import Link from 'next/link'
+import {usePathname} from 'next/navigation';
+
 import styles from "./navigation.module.scss"
 
-interface Props {
-  page: string;
-}
+export default function Navigation() {
+  const pathname = usePathname()
 
-export default function Navigation({page}: Props) {
   return (
         <div className={styles.nav}>
-          <button className={`${styles.nav__button} ${styles.active}`}>
+          <Link
+            href={"/"}
+            className={`${styles.nav__button} ${pathname === "/" ? styles.active : ""}`}
+          >
             <span className={styles.nav__buttonBar} />
-            <a className={styles.nav__buttonText} >Home</a>
-          </button>
+            <span className={styles.nav__buttonText} >Home</span>
+          </Link>
           <span className={styles.nav__dot}/>
-          <button className={styles.nav__button}>
+          <Link
+            href={"/techStack"}
+            className={`${styles.nav__button} ${pathname === "/techStack" ? styles.active : ""}`}
+          >
             <span className={styles.nav__buttonBar} />
-            <a className={styles.nav__buttonText} >Tech stack</a>
-          </button>
+            <span className={styles.nav__buttonText} >Tech stack</span>
+          </Link>
           <span className={styles.nav__dot}/>
-          <button className={styles.nav__button}>
+          <Link
+            href={"/experience"}
+            className={`${styles.nav__button} ${pathname === "/experience" ? styles.active : ""}`}
+          >
             <span className={styles.nav__buttonBar} />
-            <a className={styles.nav__buttonText} >Experience</a>
-          </button>
+            <span className={styles.nav__buttonText} >Experience</span>
+          </Link>
           <span className={styles.nav__dot}/>
-          <button className={styles.nav__button}>
+          <Link
+            href={"/contact"}
+            className={`${styles.nav__button} ${pathname === "/contact" ? styles.active : ""}`}
+          >
             <span className={styles.nav__buttonBar} />
-            <a className={styles.nav__buttonText} >Contact</a>
-          </button>
+            <span className={styles.nav__buttonText} >Contact</span>
+          </Link>
         </div>
   )
 }

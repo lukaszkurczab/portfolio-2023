@@ -2,7 +2,20 @@
 @import "../../src/styles/mixins";
 @import "../../src/styles/fonts";
 
-.projects__title {
+.landingPage{
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  @include myFlex;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.experience__title {
     text-align: center;
     font-size: 54px;
     line-height: 54x;
@@ -27,12 +40,12 @@
       margin: 48px 4px;
       opacity: 0.9;
   
-      &-image {
+      &Image {
         position: absolute;
         height: 100%;
       }
   
-      &-textWrapper {
+      &TextWrapper {
         position: relative;
         z-index: 2;
         padding: 16px 32px;
@@ -42,19 +55,19 @@
         opacity: 0;
       }
   
-      &-name,
-      &-desc {
+      &Name,
+      &Desc {
         position: relative;
         opacity: 0;
         transition: 0s;
       }
   
-      &-name {
+      &Name {
         color: #acacac;
         font-size: 24px;
       }
   
-      &-desc {
+      &Desc {
         color: #d5d5d5;
         font-size: 16px;
       }
@@ -63,9 +76,9 @@
         width: calc(100% / 3);
         opacity: 1;
   
-        .project__tile-name,
-        .project__tile-desc,
-        .project__tile-textWrapper {
+        .project__tileName,
+        .project__tileDesc,
+        .project__tileTextWrapper {
           opacity: 1;
           transition: 0.5s;
         }
@@ -97,12 +110,12 @@
         width: 100%;
         overflow: hidden;
   
-        &-image {
+        &Image {
           height: auto;
           width: 100%;
         }
   
-        &-textWrapper {
+        &TextWrapper {
           height: 60%;
         }
   

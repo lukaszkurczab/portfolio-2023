@@ -33,7 +33,7 @@ const Tech = () => {
             <TechTile src={nodejs} name="Node.js"/>
             <TechTile src={csharp} name="C#"/>
             <TechTile src={sitecore} name="Sitecore"/>
-            <TechTile src={docker} name="Sitecore"/>
+            <TechTile src={docker} name="Docker"/>
           </div>
         </div>
         <div className={styles.tilesGroup}>

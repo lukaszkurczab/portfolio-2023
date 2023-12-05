@@ -9,6 +9,7 @@ import nodejs from "../../public/nodejs.svg"
 import csharp from "../../public/csharp.svg"
 import sitecore from "../../public/sitecore.png"
 import nextjs from "../../public/nextjs.png"
+import docker from "../../public/docker.png"
 import materialui from "../../public/materialui.svg"
 
 const Tech = () => {
@@ -32,6 +33,7 @@ const Tech = () => {
             <TechTile src={nodejs} name="Node.js"/>
             <TechTile src={csharp} name="C#"/>
             <TechTile src={sitecore} name="Sitecore"/>
+            <TechTile src={docker} name="Sitecore"/>
           </div>
         </div>
         <div className={styles.tilesGroup}>

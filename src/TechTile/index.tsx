@@ -6,7 +6,7 @@ import styles from "./styles.module.scss"
 
 interface Props{
   src: StaticImageData;
-  name: string
+  name: string;
 }
 
 const TechTile = ({src, name}:Props) => {

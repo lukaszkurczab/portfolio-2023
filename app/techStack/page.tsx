@@ -1,5 +1,4 @@
-import * as React from "react"
-import TechTile from "../../src/techTile/index"
+import TechTile from "../../src/TechTile/index"
 import styles from "./styles.module.scss"
 
 import react from "../../public/react.png"

@@ -54,7 +54,10 @@
 
   .tilesGroup {
     max-height: 365px;
-    overflow-y: scroll;
+    
+    &__tiles{
+      overflow-x: scroll;
+    }
   }
 }
 

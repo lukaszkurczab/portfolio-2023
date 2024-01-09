@@ -29,8 +29,6 @@
     width: calc(100vw - 320px);
     height: calc(100vh - 140px);
     overflow: visible;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .layout {
@@ -39,6 +37,7 @@
     &__logo {
       top: 32px;
       width: 72px;
+      height: 72px;
     }
 
     .menu {
@@ -51,28 +50,12 @@
   }
 }
 
-@media (max-width: $tablet) {
-  .layout {
-    .page-wrapper {
-      padding: 40px 0;
-
-      .pageWrapper {
-        width: calc(100vw - 160px);
-        height: calc(100vh - 80px);
-      }
-    }
-  }
-}
-
 @media (max-width: $mobile) {
   .layout {
-    .page-wrapper {
-      padding: 120px 0;
-
-      .pageWrapper {
-        width: calc(100vw - 120px);
-        height: calc(100vh - 190px);
-      }
+    .pageWrapper {
+      padding: 40px;
+      width: 100vw;
+      height: 100vh;
     }
 
     .menu {

@@ -55,7 +55,7 @@
 @media (max-width: $laptop) {
     .tile {
       margin: 8px 18px;
-      width: 120px;
+      min-width: 120px;
       height: 160px;
       box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
 

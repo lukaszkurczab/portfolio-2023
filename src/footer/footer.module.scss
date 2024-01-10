@@ -46,8 +46,8 @@
 
 @media (max-width: $mobile) {
   .footer {
-      top: 32px;
-      right: 156px;
+      bottom: 12px;
+      left: 32px;
       align-items: flex-start;
       flex-direction: row;
 
@@ -59,6 +59,7 @@
 
 @media (max-width: $mobile-small) {
   .footer  {
-      top: 16px;
+      bottom: 12px;
+      left: 16px;
     }
 }

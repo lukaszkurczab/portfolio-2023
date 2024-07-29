@@ -1,17 +1,17 @@
-@import "../styles/mixins.scss" ;
-@import "../styles/variables.scss" ;
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 
-.nav{
+.nav {
   position: fixed;
   flex-direction: column;
   align-items: flex-end;
   top: 50%;
   right: 64px;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   z-index: 10;
   @include myFlex;
 
-  &__button{
+  &__button {
     height: 60px;
     border-radius: 2px;
     flex-direction: row-reverse;
@@ -19,7 +19,7 @@
     border: none;
     @include myFlex;
 
-    &Bar{
+    &Bar {
       display: block;
       height: 60px;
       width: 3px;
@@ -27,7 +27,7 @@
       border-radius: 2px;
     }
 
-    &Text{
+    &Text {
       white-space: nowrap;
       color: transparent;
       line-height: 60px;
@@ -36,16 +36,16 @@
       margin-right: 20px;
     }
 
-    &:hover{
+    &:hover {
       cursor: pointer;
 
-      .nav__buttonText{
+      .nav__buttonText {
         color: #cfcfcf;
       }
     }
   }
 
-  &__dot{
+  &__dot {
     display: block;
     height: 3px;
     width: 3px;
@@ -54,13 +54,13 @@
     background-color: #707070;
   }
 
-  .nav__button.active{
-    .nav__buttonBar{
+  .nav__button.active {
+    .nav__buttonBar {
       background-color: #fff;
       box-shadow: 0px 0px 5px #fff;
     }
 
-    .nav__buttonText{
+    .nav__buttonText {
       color: #fff;
     }
   }
@@ -76,37 +76,60 @@
   }
 
   .navMobile {
-    @include myFlex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-    .navMobile__buttonsIcon_wrapper{
+    .navMobile__buttonsIcon_wrapper {
       position: fixed;
       top: 16px;
       right: 32px;
       background-color: transparent;
       border: 0;
-      z-index: 100;
+      z-index: 101;
+
+      &__icon {
+        width: 32px;
+        height: 32px;
+      }
     }
 
-    .navMobile__buttonsWrapper{
-      position: fixed;
-      right: 32px;
-      top: 50px;
-      flex-direction: column;
-      align-items: flex-end;
-      z-index: 100;
+    .navMobile__buttonsWrapper {
       @include myFlex;
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100%;
+      width: 265px;
+      background-color: rgba(0, 0, 0, 0.6);
+      flex-direction: column;
+      padding-top: 64px;
+      transition: transform 0.3s ease;
+      z-index: 100;
 
       .navMobile__button {
-        margin-top: 10px;
-        background: radial-gradient(circle at 35% 15%, #444, #222 40%);
-        border: 1px solid white;
+        background: none;
+        border: none;
         color: white;
         font-size: 20px;
         font-weight: 600;
-        padding: 6px 0;
-        text-align: center;
-        width: 140px;
+        padding: 10px 0;
+        width: 100%;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &Text {
+          padding: 0 20px;
+        }
+
+        &:hover {
+          color: #cfcfcf;
+        }
       }
+    }
+
+    .navMobile__show {
+      transform: translateX(-100%);
     }
   }
 }

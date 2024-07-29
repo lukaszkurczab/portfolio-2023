@@ -2,11 +2,12 @@
 @import "../../src/styles/mixins";
 @import "../../src/styles/fonts";
 
-.landingPage{
+.landingPage {
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  gap: 24px;
   overflow-y: scroll;
   @include myFlex;
 
@@ -17,130 +18,139 @@
 
 .tilesGroup__title {
   font-size: 32px;
-    text-shadow: 4px 3px 4px #000;
-    color: #cfcfcf;
+  text-shadow: 4px 3px 4px #000;
+  color: #cfcfcf;
 }
 
 .experience__title {
-    text-align: center;
-    font-size: 54px;
-    line-height: 54x;
-    font-weight: 500;
-    text-shadow: 8px 6px 8px #000;
-    color: #cfcfcf;
-    margin-bottom: 16px;
-  }
-  
-  .projects__group {
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    @include myFlex;
+  text-align: center;
+  font-size: 54px;
+  line-height: 54x;
+  font-weight: 500;
+  text-shadow: 8px 6px 8px #000;
+  color: #cfcfcf;
+  margin-bottom: 16px;
+}
 
-    .projectsTiles{
-      @include myFlex;
+.projects__group {
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  @include myFlex;
+
+  .projectsTiles {
+    @include myFlex;
+  }
+
+  .project__tile {
+    flex-shrink: 1;
+    width: calc(100% / 6);
+    overflow: hidden;
+    position: relative;
+    margin: 16px 10px;
+    height: 300px;
+    opacity: 0.9;
+    flex-shrink: 1;
+
+    &Image {
+      position: absolute;
+      height: 100%;
+      width: auto;
     }
-  
-    .project__tile {
-      flex-shrink: 1;
-      width: calc(100% / 6);
-      overflow: hidden;
+
+    &TextWrapper {
       position: relative;
-      margin: 16px 10px;
-      height: 300px;
-      opacity: 0.9;
-      flex-shrink: 1;
-  
-      &Image {
-        position: absolute;
-        height: 100%;
-        width: auto;
-      }
-  
-      &TextWrapper {
-        position: relative;
-        z-index: 2;
-        padding: 16px 32px;
-        width: 100%;
-        height: 35%;
-        background-color: #222222aa;
-        opacity: 0;
-      }
-  
-      &Name,
-      &Desc {
-        position: relative;
-        opacity: 0;
-        transition: 0s;
-      }
-  
-      &Name {
-        color: #acacac;
-        font-size: 24px;
-      }
-  
-      &Desc {
-        color: #d5d5d5;
-        font-size: 16px;
-      }
-  
-      &:hover {
-        width: calc(100% / 3);
+      z-index: 2;
+      padding: 16px 32px;
+      width: 100%;
+      height: 35%;
+      background-color: #222222aa;
+      opacity: 0;
+    }
+
+    &Name,
+    &Desc {
+      position: relative;
+      opacity: 0;
+      transition: 0s;
+    }
+
+    &Name {
+      color: #acacac;
+      font-size: 24px;
+    }
+
+    &Desc {
+      color: #d5d5d5;
+      font-size: 16px;
+    }
+
+    &:hover {
+      width: calc(100% / 3);
+      opacity: 1;
+
+      .project__tileName,
+      .project__tileDesc,
+      .project__tileTextWrapper {
         opacity: 1;
-  
-        .project__tileName,
-        .project__tileDesc,
-        .project__tileTextWrapper {
-          opacity: 1;
-          transition: 0.5s;
-        }
+        transition: 0.5s;
       }
     }
   }
-  
-  @media (max-width: $laptop) {
-    .projects__title {
-      margin-bottom: 22px;
-    }
+}
+
+@media (max-width: $laptop) {
+  .projects__title {
+    margin-bottom: 22px;
   }
-  
-  @media (max-width: $mobile) {
-    .projects__group {
-      .projectsTiles {
-        max-height: calc(100% - 74px);
-        flex-direction: column;
-        overflow-y: scroll;
-        .project__tile {
-          flex-shrink: 0;
-          margin: 8px 0;
-          height: 120px;
+}
+
+@media (max-width: $mobile) {
+  .landingPage {
+    height: calc(100% - 52px);
+  }
+  .experience__title {
+    font-size: 36px;
+  }
+  .projects__group {
+    .projectsTiles {
+      flex-direction: column;
+      .project__tile {
+        flex-shrink: 0;
+        margin: 8px 0;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+
+        &Image {
+          height: auto;
           width: 100%;
-          overflow: hidden;
-    
-          &Image {
-            height: auto;
-            width: 100%;
-          }
-    
-          &TextWrapper {
-            height: 60%;
-          }
-    
-          &:hover {
-            width: 100%;
-          }
         }
-    
-        &::-webkit-scrollbar {
-          width: 0;
+
+        &TextWrapper {
+          height: 60%;
         }
+
+        &:hover {
+          width: 100%;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
       }
     }
   }
-  
-  @media (max-width: $mobile-small) {
-    .projects__title {
-      font-size: 36px;
+}
+
+@media (max-width: $mobile-small) {
+  .projects__title {
+    font-size: 36px;
+  }
+
+  .projects__group {
+    .tilesGroup__title {
+      font-size: 24px;
     }
   }
-  
+}

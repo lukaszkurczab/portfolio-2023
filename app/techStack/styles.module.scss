@@ -2,7 +2,7 @@
 @import "../../src/styles/mixins";
 @import "../../src/styles/fonts";
 
-.landingPage{
+.landingPage {
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -34,18 +34,17 @@
   width: 100%;
   @include myFlex;
 
-  &__title{
+  &__title {
     font-size: 32px;
     text-shadow: 4px 3px 4px #000;
     color: #cfcfcf;
   }
 
-  &__tiles{
+  &__tiles {
     width: 100%;
     @include myFlex;
   }
 }
-
 
 @media (max-width: $laptop) {
   .tiles__title {
@@ -54,8 +53,8 @@
 
   .tilesGroup {
     max-height: 365px;
-    
-    &__tiles{
+
+    &__tiles {
       overflow-x: scroll;
     }
   }
@@ -68,12 +67,19 @@
 }
 
 @media (max-width: $mobile) {
+  .landingPage {
+    height: calc(100% - 52px);
+  }
   .tiles__title {
+    font-size: 36px;
     margin-bottom: 22px;
   }
 
   .tilesGroup {
     max-height: 540px;
+    &__title {
+      font-size: 24px;
+    }
   }
 }
 

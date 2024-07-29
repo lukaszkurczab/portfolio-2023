@@ -80,11 +80,11 @@
 @media (max-width: $mobile) {
   .landingPage {
     width: calc(100vw - 160px);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 240px);
 
     h1 {
-      font-size: 72px;
-      line-height: 72px;
+      line-height: 48px;
+      font-size: 48px;
       .name {
         font-size: 36px;
       }
@@ -93,10 +93,5 @@
     h2 {
       font-size: 24px;
     }
-  }
-}
-
-@media (max-width: $mobile-small) {
-  .landingPage {
   }
 }

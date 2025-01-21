@@ -3,11 +3,12 @@
 
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: 48px;
   width: 100%;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color: transparent;
+  gap: 16px;
   @include myFlex;
 
   &__link {
@@ -36,22 +37,12 @@
   }
 }
 
-@media (max-width: $laptop) {
-  .footer {
-    bottom: 48px;
-    width: 72px;
-  }
-}
-
-@media (max-width: $tablet) {
-}
-
 @media (max-width: $mobile) {
   .footer {
     bottom: -12px;
     left: 0;
     align-items: flex-start;
-    flex-direction: row;
+    gap: 8px;
 
     &__link {
       margin: 16px 12px;

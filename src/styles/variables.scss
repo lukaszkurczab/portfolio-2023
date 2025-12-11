@@ -1,0 +1,80 @@
+/*Borders
+************************************************************ */
+
+$border-radius-l: 15px;
+
+/*Breaks
+************************************************************ */
+
+$break-mid: 1100px;
+$break-small: 720px;
+$break-mobile: 550px;
+
+/*Buttons
+************************************************************ */
+
+$button-s: 30px;
+$button-l: 300px;
+
+/*Colors
+************************************************************ */
+
+$c-black: #000;
+$c-white: #fff;
+$c-dark-grey: #333;
+$c-grey: #c7c7c7;
+$c-light-grey: #f5f5f5;
+$c-blue-light: #0071c2;
+$c-blue: #003580;
+$c-blue-dark: #00224f;
+$c-bluemine: #1f4e8f;
+$c-creme: #fff0e0;
+$c-yellow: #febb02;
+$c-silver: #bdbdbd;
+$c-brown: #bc5b01;
+$c-congress-blue: #00438f;
+$c-bahama-blue: #005999;
+$c-dove-gray: #6b6b6b;
+$c-polar: #f0f7fb;
+$c-silver-chalice: #a5a5a5;
+$c-gallery: #ececec;
+
+/*Device sizes
+************************************************************ */
+
+$mobile-small: 479px;
+$mobile: 767px;
+$tablet: 1023px;
+$laptop: 1365px;
+
+/*Fonts
+************************************************************ */
+
+$f-roboto: "Roboto", "sans-serif";
+$f-montserrat: "Montserrat", "sans-serif";
+
+/*Grid
+************************************************************ */
+
+$wrapper: 1110px;
+$wrapper-header: 1140px;
+$wrapper-laptop: 990px;
+$wrapper-mid: 800px;
+$wrapper-mobile: 480px;
+$columns: 12;
+$grid-xxs: 20px;
+$grid-xs: 50px;
+$grid-s: 100px;
+$grid-normal: 200px;
+$grid-mid: 640px;
+$grid-lg: 992px;
+$grid-xl: 1199px;
+
+/*Paddings, Margins
+************************************************************ */
+
+$space-xs: 4px;
+$space-s: 6px;
+$space-m: 10px;
+$space-l: 12px;
+$space-xl: 15px;

@@ -1,0 +1,49 @@
+@import "./variables";
+@import "./normalize";
+@import "./fonts.scss";
+
+*{ 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-weight: 300;
+}
+
+body {
+  font: normal normal normal 1rem;
+  overflow-x: hidden;
+  max-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: $c-white;
+  color: $c-black;
+  font-family: "Segoe UI", "Roboto", "sans-serif";
+}
+
+img,
+input[type="image"],
+table {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $c-black;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}

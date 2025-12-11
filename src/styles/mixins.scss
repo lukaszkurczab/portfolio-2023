@@ -1,0 +1,24 @@
+@function pxToRem($pxsize, $rembase:16){
+  @return ($pxsize / $rembase) + rem;
+}
+
+@mixin boxShadow($arg) {
+  box-shadow: $arg;
+  -webkit-box-shadow: $arg
+}
+
+@mixin myFlex() {
+  $prefixes:(-webkit-box, -moz-box, -ms-flexbox, -webkit-flex, flex);
+  @each $prefix in $prefixes {
+    display: $prefix;
+  }
+}
+
+@mixin myGrid($rows, $columns, $gap-x:0, $gap-y:0) {
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  -ms-grid-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+  -ms-grid-columns: repeat($columns, 1fr);
+  gap: ($gap-y $gap-x);
+}

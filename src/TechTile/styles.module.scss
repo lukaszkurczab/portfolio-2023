@@ -1,0 +1,98 @@
+@import "../../src/styles/variables";
+@import "../../src/styles/mixins";
+@import "../../src/styles/fonts";
+
+.tile {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  margin: 16px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  overflow: visible;
+
+  &Content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  &Text {
+    text-align: center;
+  }
+
+  &Img {
+    width: 60%;
+    height: auto;
+  }
+
+  &ImgWrapper {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    @include myFlex;
+  }
+
+  &:hover {
+    .tileContent {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+  }
+}
+
+@media (max-width: $laptop) {
+    .tile {
+      margin: 8px 18px;
+      min-width: 120px;
+      height: 160px;
+      box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
+
+      &-img {
+        max-width: 50%;
+      }
+
+      &:hover {
+        .tileContent {
+          transform: translateY(-10px);
+        }
+      }
+    }
+}
+
+@media (max-width: $tablet) {
+    .tile {
+      width: 86px;
+      height: 128px;
+
+      .tileContent {
+        .tile-text {
+          font-size: 14px;
+        }
+      }
+    }
+}
+
+@media (max-width: $mobile) {
+    .tile {
+      width: 120px;
+      height: 160px;
+    }
+}
+
+@media (max-width: $mobile-small) {
+    .tile {
+      margin: 8px 12px;
+    }
+}

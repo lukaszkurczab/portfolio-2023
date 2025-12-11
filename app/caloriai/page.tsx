@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 export default function SupportPage() {
@@ -29,6 +30,16 @@ export default function SupportPage() {
         >
           lukasz.kurczab@gmail.com
         </a>
+      </section>
+
+      <section className={styles.support__section}>
+        <h3 className={styles.support__sectionTitle}>Privacy Policy</h3>
+        <p className={styles.support__text}>
+          You can view the full privacy policy here:
+        </p>
+        <Link href="/caloriai/privacy" className={styles.support__link}>
+          View Privacy Policy
+        </Link>
       </section>
     </main>
   );

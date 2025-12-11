@@ -7,7 +7,7 @@ import portfolio from "../../public/portfolio.jpg";
 import youtube from "../../public/youtube.jpg";
 import fylo from "../../public/fylo.jpg";
 import capgemini from "../../public/capgemini.jpg";
-import workon from "../../public/workon.jpg";
+import caloriai from "../../public/caloriai.jpg";
 
 import styles from "./styles.module.scss";
 
@@ -44,12 +44,16 @@ const Experience = () => {
               <h2 className={styles.project__tileDesc}>Own project</h2>
             </div>
           </a>
-          <a href="" className={styles.project__tile}>
-            <Image src={workon} alt="" className={styles.project__tileImage} />
+          <a href="/caloriai" className={styles.project__tile}>
+            <Image
+              src={caloriai}
+              alt="CaloriAI"
+              className={styles.project__tileImage}
+            />
             <div className={styles.project__tileTextWrapper}>
-              <h3 className={styles.project__tileName}>WorkOn</h3>
+              <h3 className={styles.project__tileName}>CaloriAI</h3>
               <h2 className={styles.project__tileDesc}>
-                Own mobile aplication - in development
+                Mobile application to count calories
               </h2>
             </div>
           </a>

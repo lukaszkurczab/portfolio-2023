@@ -7,7 +7,7 @@ export default function TermsPage() {
 
       <section className={styles.policy__section}>
         <p className={styles.policy__text}>
-          These Terms of Service govern the use of the <strong>CaloriAI</strong>{" "}
+          These Terms of Service govern the use of the <strong>Fitaly</strong>{" "}
           application, owned and operated by <strong>Łukasz Kurczab</strong>,
           ul. Wróblewskiego 59, 33-170 Tuchów, Poland. For legal inquiries,
           contact: <strong>lukasz.kurczab@gmail.com</strong>.
@@ -17,7 +17,7 @@ export default function TermsPage() {
       <section className={styles.policy__section}>
         <h3 className={styles.policy__sectionTitle}>1. General Provisions</h3>
         <p className={styles.policy__text}>
-          By accessing or using the CaloriAI app, you agree to be bound by these
+          By accessing or using the Fitaly app, you agree to be bound by these
           Terms of Service and the Privacy Policy. These terms apply to all
           users of the app.
         </p>
@@ -49,16 +49,16 @@ export default function TermsPage() {
           4. Scope and Nature of the Service
         </h3>
         <p className={styles.policy__text}>
-          CaloriAI is a nutrition tracking application designed to help users
-          log meals, analyze dietary data, and monitor progress. Some features
-          may use artificial intelligence to generate insights and suggestions.
+          Fitaly is a nutrition tracking application designed to help users log
+          meals, analyze dietary data, and monitor progress. Some features may
+          use artificial intelligence to generate insights and suggestions.
         </p>
 
         <h3 className={styles.policy__sectionTitle}>5. User Content</h3>
         <p className={styles.policy__text}>
           You may upload personal data and content, including meal photos and
           nutrition information. You retain ownership of your content but grant
-          CaloriAI permission to process it solely for the purpose of providing
+          Fitaly permission to process it solely for the purpose of providing
           app features (e.g., AI analysis, statistics).
         </p>
 
@@ -74,7 +74,7 @@ export default function TermsPage() {
           7. Subscriptions and Payments
         </h3>
         <p className={styles.policy__text}>
-          CaloriAI may offer premium features through auto-renewable
+          Fitaly may offer premium features through auto-renewable
           subscriptions. Subscriptions are managed by the Apple App Store or
           Google Play and are subject to their terms. You can manage or cancel
           your subscription at any time through your platform account settings.

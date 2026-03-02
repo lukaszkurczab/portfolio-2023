@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
       <section className={styles.policy__section}>
         <p className={styles.policy__text}>
           This Privacy Policy explains how your data is handled by{" "}
-          <strong>CaloriAI</strong>, owned and operated by{" "}
+          <strong>Fitaly</strong>, owned and operated by{" "}
           <strong>Łukasz Kurczab</strong>, ul. Wróblewskiego 59, 33-170 Tuchów,
           Poland. For privacy or legal requests, contact:{" "}
           <strong>lukasz.kurczab@gmail.com</strong>.
@@ -117,7 +117,7 @@ export default function PrivacyPolicyPage() {
         <h3 className={styles.policy__sectionTitle}>9. User Content</h3>
         <p className={styles.policy__text}>
           Photos of meals are treated as user-generated content. By uploading
-          them, you grant CaloriAI permission to process them to provide app
+          them, you grant Fitaly permission to process them to provide app
           features (e.g., AI Vision, dietary analysis).
         </p>
 
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
         <p className={styles.policy__text}>
           Data sent to AI service providers is used only to provide the features
           you request (such as meal photo analysis and personalized suggestions)
-          and is not used by CaloriAI to train its own models.
+          and is not used by Fitaly to train its own models.
         </p>
 
         <h3 className={styles.policy__sectionTitle}>11. Analytics & Cookies</h3>
@@ -155,7 +155,7 @@ export default function PrivacyPolicyPage() {
         <p className={styles.policy__text}>
           Information and suggestions provided by the app or its AI features are
           for informational purposes only and should not be treated as medical
-          advice. CaloriAI and Łukasz Kurczab are not responsible for any health
+          advice. Fitaly and Łukasz Kurczab are not responsible for any health
           consequences resulting from reliance on the app’s content or AI
           suggestions.
         </p>

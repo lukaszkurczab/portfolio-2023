@@ -4,12 +4,12 @@ import styles from "./styles.module.scss";
 export default function SupportPage() {
   return (
     <main className={styles.landingPage}>
-      <h2 className={styles.support__title}>CaloriAI Support</h2>
+      <h2 className={styles.support__title}>Fitaly Support</h2>
 
       <section className={styles.support__section}>
-        <h3 className={styles.support__sectionTitle}>CaloriAI</h3>
+        <h3 className={styles.support__sectionTitle}>Fitaly</h3>
         <p className={styles.support__text}>
-          CaloriAI is an internal utility application currently in limited early
+          Fitaly is an internal utility application currently in limited early
           release. It provides access to a set of basic tools used for testing
           core workflows, data handling, and interface behavior.
         </p>
@@ -37,7 +37,7 @@ export default function SupportPage() {
         <p className={styles.support__text}>
           You can view the full privacy policy here:
         </p>
-        <Link href="/caloriai/privacy" className={styles.support__link}>
+        <Link href="/fitaly/privacy" className={styles.support__link}>
           View Privacy Policy
         </Link>
       </section>

@@ -23,6 +23,12 @@
     color: white;
     padding: 100px 200px;
   }
+
+  .pageWrapperTot {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
 }
 
 @media (max-width: $laptop) {
@@ -34,6 +40,12 @@
 
   .layout {
     padding: 12px 24px;
+
+    .pageWrapperTot {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+    }
 
     &__logo {
       top: 32px;
@@ -62,6 +74,12 @@
       padding: 80px 40px;
       width: 100vw;
       height: 100vh;
+    }
+
+    .pageWrapperTot {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
     }
 
     .menu {
@@ -112,6 +130,12 @@
       .pageWrapper {
         width: calc(100vw - 60px);
       }
+    }
+
+    .pageWrapperTot {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
     }
   }
 }
